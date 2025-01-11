@@ -1,0 +1,14 @@
+.background {
+    background-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.custom-dialog-pane {
+    -fx-background-radius: 10px;
+    border-radius: 10px;
+    -fx-border-radius: 10px;
+    border-width: 1px;
+    -fx-border-width: 1px;
+    border-color: gray;
+    -fx-border-color: gray;
+}

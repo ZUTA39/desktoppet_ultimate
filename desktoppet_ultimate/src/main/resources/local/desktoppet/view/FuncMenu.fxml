@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="local.desktoppet.view.FuncMenuController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="440.0" layoutX="81.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/background2.gif" />
+         </image>
+      </ImageView>
+      <HBox layoutX="37.0" layoutY="309.0" spacing="55.0" />
+      <Label layoutX="120.0" layoutY="14.0" text="龙泡泡，你的小帮手！">
+         <font>
+            <Font name="Microsoft YaHei UI Bold" size="36.0" />
+         </font>
+      </Label>
+      <VBox layoutX="14.0" layoutY="58.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleTakePet" prefHeight="30.0" prefWidth="90.0" text="召唤龙泡泡！" />
+            <Button mnemonicParsing="false" onAction="#handleSwitch" prefHeight="30.0" prefWidth="90.0" text="换个泡泡？" />
+            <Button mnemonicParsing="false" onAction="#handleFeedPet" prefHeight="30.0" prefWidth="90.0" text="投喂龙泡泡！" />
+            <Button mnemonicParsing="false" onAction="#handleBye" prefHeight="30.0" prefWidth="90.0" text="龙泡泡再见~" />
+            <Button mnemonicParsing="false" onAction="#handleMusicPlay" prefHeight="30.0" prefWidth="90.0" text="听个小曲~" />
+            <Button mnemonicParsing="false" onAction="#handleStopMusic" prefHeight="30.0" prefWidth="90.0" text="不听啦~" />
+            <Button mnemonicParsing="false" onAction="#handleAccREcorder" prefHeight="30.0" prefWidth="90.0" text="记账" />
+         </children>
+      </VBox>
+      <GridPane layoutX="138.0" layoutY="102.0" prefHeight="241.0" prefWidth="433.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.33331298828125" minWidth="10.0" prefWidth="134.33331298828125" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="319.0" minWidth="10.0" prefWidth="299.66668701171875" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="当前龙泡泡">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="好感度" textFill="SALMON" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="当前音乐" textFill="MEDIUMTURQUOISE" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="currentPetname" text="未选择宠物" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="favorability" text="0" textFill="#a2cd5a" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="currentMusic" text="未播放" textFill="ORANGE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
